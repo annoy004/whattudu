@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import React, {useContext, useState} from 'react'
-import NoteContext from '../context/notes/NoteContext';
+import NoteContext from '../context/notes/noteContext';
 import {  toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'; 
 

@@ -6,7 +6,7 @@ import Divider from '@mui/material/Divider';
 import Typography from '@mui/material/Typography';
 import EditIcon from '@mui/icons-material/Edit';
 import Checkbox from '@mui/material/Checkbox';
-import NoteContext from '../context/notes/NoteContext';
+import NoteContext from '../context/notes/noteContext';
 
 
 
@@ -41,10 +41,10 @@ const Showtask = (props) => {
     };
 
     return ( 
-        <div className="w-screen h-screen bg-[#f5ecfc]" >
-            <div className='flex flex-wrap' >
-                <Card key={note._id} variant="outlined"  className='ml-2 mt-12 mr-5    bg-opacity-75  bg-blur-md border-2 border-stone-50 backdrop-filter backdrop-blur-md backdrop-saturate-100  shadow-2xl' style={{ backgroundColor: priorityColor }}>
-                    <Box sx={{ p: 2 }}>
+        <div className=" mb-4 bg-[#f5ecfc] " >
+            <div className='' >
+                <Card key={note._id} variant="outlined"  className='5  flex  bg-opacity-75  bg-blur-md border-2 border-stone-50 backdrop-filter backdrop-blur-md backdrop-saturate-100  shadow-2xl' style={{ backgroundColor: priorityColor }}>
+                    <Box  className='mr-auto  ml-10'  sx={{ p: 2 }}>
                         <Stack direction="row" justifyContent="space-between" alignItems="center">
                             <Typography gutterBottom variant="h5" component="div">
                                 {note.title} 
@@ -53,16 +53,16 @@ const Showtask = (props) => {
                         <Typography color="text.secondary" variant="body2">
                             {note.description}
                         </Typography>
-                    </Box>
+                    </Box >
                     <Divider />
-                    <Box sx={{ p: 2 }}>
-                        <Typography color="text.secondary" variant="body2">
+                    <Box className='flex ' alignItems='center' sx={{ p: 2 }}>
+                        <Typography color="text.secondary" variant="body2" >
                             Due date: {formatDate(note.date)}
                         </Typography>
-                        <Typography gutterBottom variant="body2">
+                        <Typography gutterBottom variant="body2" className='px-10'>
                             Edit or Delete your Task
                         </Typography>
-                        <Stack direction="row" spacing={1} alignItems="center">
+                        <Stack direction="row" spacing={1} alignItems="center" >
                             {/* Checkbox */}
                             
                             <Checkbox {...label} onClick={() => deleteNote(note._id)} />

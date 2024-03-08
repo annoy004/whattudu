@@ -3,8 +3,7 @@ const mongoose = require('mongoose');
 var cors = require('cors')
 
 
-mongoose.connect("mongodb://127.0.0.1:27017/todolist?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+1.10.6")
-  .then(() => {
+mongoose.connect("mongodb+srv://singhkashish14203:kashish14203@cluster4.dmqjs1h.mongodb.net/whatudu?retryWrites=true&w=majority")  .then(() => {
     console.log('Connected to MongoDB');
   })
   .catch((err) => {

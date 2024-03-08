@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useRef, useState } from 'react';
-import NoteContext from '../context/notes/NoteContext';
+import NoteContext from '../context/notes/noteContext';
 import Showtask from './Showtask';
 import Header from './Header';
 import Footer from './Footer';
@@ -98,8 +98,8 @@ else{
         </div>
       </div>
 
-      <div className="row my-3">
-        <div className="  flex ">
+      <div className="row ">
+        <div className="  flex flex-col ">
           {notes.map((note) => {
             return <Showtask key={note._id} updateNote={updateNote}  note={note} />;
           })}
